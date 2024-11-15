@@ -1,17 +1,18 @@
 /* Custom styles */
 /*=============== BASE ===============*/
-body, html {
-    overflow-x: hidden;
-}
-
-
-/*=============== NAV ===============*/
-.bg-orange {
-    background-color: #DD7009;
-}/* Custom styles */
-/*=============== BASE ===============*/
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-color: #bfbfbf;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.container {
+    padding-top: 50px;
 }
 
 
@@ -29,10 +30,6 @@ html {
     color: white !important;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 .btn :hover {
     color: #007bff; /* Blue color */
 }
@@ -44,110 +41,155 @@ html {
 }
 
 
+/*===== Drop down menu =====*/
+/* CSS for ensuring dropdown remains within the viewport */
+.dropdown-menu {
+    right: 0;
+    left: auto;
+    max-width: 100vw; /* Adjusts the dropdown to be wider */
+    width: 175px; /* Set a specific width for the dropdown */    
+    overflow-wrap: break-word; /* Wraps text within the dropdown to prevent overflow */
+    background-color: #ff8c00; /* Darker orange background for the dropdown menu */
+}
+
+/* Styling for dropdown items */
+.dropdown-menu a.dropdown-item {
+    color: #ffffff; /* White text color for better contrast */
+    padding: 10px 20px;
+    white-space: normal; /* Allows text to wrap normally inside the dropdown items */
+    background-color: #ff8c00; /* Default background color */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover and active state styling */
+.dropdown-menu a.dropdown-item:hover,
+.dropdown-menu a.dropdown-item:focus {
+    background-color: #e67300; /* Deeper orange when hovered */
+    color: #ffffff; /* Keep text color white on hover */
+}
+
+.dropdown-menu a.dropdown-item:active {
+    background-color: #cc6600; /* Even deeper orange when actively clicked */
+    color: #ffffff; /* Keep text color white */
+}
+
+
 /*=============== HOME ===============*/
+/* setting for background img*/
 .home {
-    background: url('https://th.bing.com/th/id/OIP.lwB-FrLJRzlPNR9-ZRsSQwHaE6?w=910&h=604&rs=1&pid=ImgDetMain') center center / cover no-repeat;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
+    padding-top: 50px;
+    position: relative; /* Ensure positioning for overlay */
 }
 
-#belowhome {
-    position: relative; /* Set position to relative */
-    padding: 100px 75px; /* Adjust padding as needed */
-    color: black; /* Ensure text color is white */
-}
-
-#belowhome::before {
+/* setting for background img*/
+.home::before {
     content: ''; /* Necessary for pseudo-element */
     position: absolute; /* Position it absolutely */
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
-    right: 0; /* Align to the right */
-    bottom: 0; /* Stretch to the bottom */
-    background: url('https://github.com/weihan07/myspatial/blob/main/image/extend_sphere.jpg?raw=true') center / cover no-repeat; /* Set your background image */
+    width: 100%;
+    height: 100%;
+    background: url('https://github.com/weihan07/myspatial/blob/main/image/extend_sphere.jpg?raw=true') center / cover no-repeat;
     opacity: 0.5; /* Set the desired opacity */
-    z-index: 1; /* Position behind text */
+    z-index: -1; /* Position behind text */
 }
 
-#belowhome > * {
-    position: relative; /* Set position to relative to ensure text is above pseudo-element */
-    z-index: 2; /* Position above the background */
+.home p {
+    text-align: justify;
+    font-size: 20px;
+    color: #585858;
 }
 
-#home {
-    padding-top: 50px; /* Adjust as needed to match the navbar height */
-}
-
-.uav {
-    width: 100%;
-    height: 350px;
-    padding-right: 100px;
-}
-
-.uav1 {
-    width: 100%;
-    height: auto;
-}
-
-
-/*=============== ABOUT ===============*/
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-td {
-    text-align: left;
-    padding: 8px;
-    vertical-align: middle;
-}
-
-.section-title {
-    font-size: 2rem;
-    margin: 50px 0 20px;
-    color: black;
+/*===== Bar =====*/
+.container1 {
+    background-color: #dd7009;
 }
 
 .feature-box {
     background-color: #dd7009;
     text-align: center;
-    padding: 50px 45px;
+    padding: 20px;
 }
 
 .feature-box1 {
-    background-color: #999898;
+    background-color: #bfbfbf;
     text-align: center;
-    padding: 50px 45px;
-}
-
-.container1 {
-    background-color: #dd7009;
+    padding: 20px;
 }
 
 .feature-box i {
-    padding-right: 15px;
-    font-size: 2rem;
+    margin-right: 10px;
+    font-size: 25px;
     color: black;
 }
 
 .feature-box1 i {
-    padding-right: 15px;
-    font-size: 2rem;
+    margin-right: 10px;
+    font-size: 25px;
     color: white;
 }
 
 .feature-box h3 {
-    margin-top: 10px;
+    font-size: 25px;
+    margin: 0;
 }
 
 .feature-box1 h3 {
     color: black;
-    margin-top: 10px;
+    font-size: 25px;
+    margin: 0;
 }
 
 
+
+/*=============== ABOUT ===============*/
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 50px 0 20px;
+    color: black;
+}
+
+.col-md-6 p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td {
+    text-align: left;
+    padding: 8px;
+    vertical-align: middle;
+}
+
+.table i {
+    font-size: 20px;
+}
+
+
+
 /*=============== DISCOVER ===============*/
+.container2 {
+    background-color: #e7e4e4;
+    padding-bottom: 10px;
+}
+
+/* Center the titles */
+.section__title1 {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.image__title {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 /* Set the container to a 3x3 grid */
 .discover__container {
     display: grid;
@@ -176,321 +218,110 @@ td {
     transform: scale(1.1); /* Slight zoom on hover */
 }
 
-/* Center the titles */
-.section__title1 {
-    padding-top: 25px;
+.video_title {
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
 
-.section__title {
-    padding: 25px;
-}
-
-.video {
-    text-align: center;
-}
-
-.container2 {
-    background-color: #e7e4e4;
-    padding-bottom: 10px;
-}
-
-
-/*=============== FOOTER ===============*/
-.footer {
-    background: #dd7009;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer__social {
-    font-size: 1.5rem;
-    color: white;
-    margin: 0 10px;
-}
-
-.footer__terms-link {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 10px;
-}
-
-.footer__terms-link:hover {
-    text-decoration: underline;
-}
-
-.footer__title {
-    color: black;
-    font-family: 'Lucida Sans';
-}
-
-.col-md-10 i {
-    padding-right: 20px;
-}
-
-.footer__container {
-    position: relative;
-}
-
-.footer__images {
-    align-self: flex-end; /* Positions images at the bottom */
-    margin-bottom: 20px; /* Adjust spacing from the bottom */
-}
-
-.footer__data p:hover,
-.footer__data p:hover strong {
-    color: lightsalmon; /* Change to the color you want for the hover effect */
-    transition: color 0.3s ease; /* Smooth transition effect */
-}
-
-/* Default icon color */
-.social-icon i {
-    color: white; /* White by default */
-    font-size: 30px; /* Adjust the size as needed */
-    transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-/* Hover effect: change icon color to blue */
-.social-icon:hover i {
-    color: #007bff; /* Blue color */
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: white !important;
-}
-
-.navbar-dark .navbar-brand {
-    color: white !important;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #f0f0f0 !important; /* Lighter shade of white */
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-.btn :hover {
-    color: #007bff; /* Blue color */
-}
-
-.btn nav-link {
-    color: blue; /* White by default */
-    font-size: 30px; /* Adjust the size as needed */
-    transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-
-/*=============== HOME ===============*/
-.home {
-    background: url('https://th.bing.com/th/id/OIP.lwB-FrLJRzlPNR9-ZRsSQwHaE6?w=910&h=604&rs=1&pid=ImgDetMain') center center / cover no-repeat;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-}
-
-#belowhome {
-    position: relative; /* Set position to relative */
-    padding: 100px 75px; /* Adjust padding as needed */
-    color: black; /* Ensure text color is white */
-}
-
-#belowhome::before {
-    content: ''; /* Necessary for pseudo-element */
-    position: absolute; /* Position it absolutely */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    right: 0; /* Align to the right */
-    bottom: 0; /* Stretch to the bottom */
-    background: url('https://github.com/weihan07/myspatial/blob/main/image/extend_sphere.jpg?raw=true') center / cover no-repeat; /* Set your background image */
-    opacity: 0.5; /* Set the desired opacity */
-    z-index: 1; /* Position behind text */
-}
-
-#belowhome > * {
-    position: relative; /* Set position to relative to ensure text is above pseudo-element */
-    z-index: 2; /* Position above the background */
-}
-
-#home {
-    padding-top: 50px; /* Adjust as needed to match the navbar height */
-}
-
-.uav {
-    width: 100%;
-    height: 350px;
-    padding-right: 100px;
-}
-
-.uav1 {
-    width: 100%;
-    height: auto;
-}
-
-
-/*=============== ABOUT ===============*/
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-td {
-    text-align: left;
-    padding: 8px;
-    vertical-align: middle;
-}
-
-.section-title {
-    font-size: 2rem;
-    margin: 50px 0 20px;
-    color: black;
-}
-
-.feature-box {
-    background-color: #dd7009;
-    text-align: center;
-    padding: 50px 45px;
-}
-
-.feature-box1 {
-    background-color: #999898;
-    text-align: center;
-    padding: 50px 45px;
-}
-
-.container1 {
-    background-color: #dd7009;
-}
-
-.feature-box i {
-    padding-right: 15px;
-    font-size: 2rem;
-    color: black;
-}
-
-.feature-box1 i {
-    padding-right: 15px;
-    font-size: 2rem;
-    color: white;
-}
-
-.feature-box h3 {
-    margin-top: 10px;
-}
-
-.feature-box1 h3 {
-    color: black;
-    margin-top: 10px;
-}
-
-
-/*=============== DISCOVER ===============*/
-/* Set the container to a 3x3 grid */
-.discover__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
-    gap: 15px; /* Space between grid items */
-    max-width: 1200px; /* Adjust width as needed */
-    margin: auto; /* Center the grid horizontally */
-}
-
-/* Style each image card */
-.image__card {
-    overflow: hidden;
-    border-radius: 8px; /* Optional: rounded corners */
-}
-
-/* Make the images fill the grid cells */
-.discover__image {
+/* Modal container styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000; /* Increase the z-index value */
+    padding-top: 60px;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Makes sure the image covers the entire cell */
-    transition: transform 0.3s ease; /* Smooth hover transition */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Hover effect */
-.image__card:hover .discover__image {
-    transform: scale(1.1); /* Slight zoom on hover */
+/* Modal content (image) styling */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
 }
 
-/* Center the titles */
-.section__title1 {
-    padding-top: 25px;
-    text-align: center;
+/* Close button styling */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
-
-.section__title {
-    padding: 25px;
-}
-
-.video {
-    text-align: center;
-}
-
-.container2 {
-    background-color: #e7e4e4;
-    padding-bottom: 10px;
-}
-
 
 /*=============== FOOTER ===============*/
-.footer {
+.footer__container {
     background: #dd7009;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    min-height: 300px; /* Adjust to fit your layout */
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-.footer__social {
-    font-size: 1.5rem;
-    color: white;
-    margin: 0 10px;
-}
-
-.footer__terms-link {
-    color: #fff;
-    text-decoration: none;
+.col-8 i {
+    font-size: 30px;
     margin-right: 10px;
+    margin-bottom: 10px;
+    color: white;
 }
 
-.footer__terms-link:hover {
-    text-decoration: underline;
+/*===== Company Link =====*/
+.contact_info {
+    color:#373737;
 }
 
-.footer__title {
+.link_social {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.link_social a {
+    margin: 0 10px; /* Space between icons */
+    font-size: 36px; /* Adjust icon size */
+    color: #333; /* Default icon color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.link i {
+    color: white;
+    font-size: 30px;
+}
+
+.link p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.contact_title {
     color: black;
     font-family: 'Lucida Sans';
-}
-
-.col-md-10 i {
-    padding-right: 20px;
 }
 
 .footer__container {
     position: relative;
 }
 
-.footer__images {
-    align-self: flex-end; /* Positions images at the bottom */
-    margin-bottom: 20px; /* Adjust spacing from the bottom */
-}
-
-.footer__data p:hover,
-.footer__data p:hover strong {
-    color: lightsalmon; /* Change to the color you want for the hover effect */
-    transition: color 0.3s ease; /* Smooth transition effect */
-}
-
 /* Default icon color */
-.social-icon i {
+.col-8 i {
     color: white; /* White by default */
     font-size: 30px; /* Adjust the size as needed */
     transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 /* Hover effect: change icon color to blue */
-.social-icon:hover i {
+.col-8:hover i {
     color: #007bff; /* Blue color */
+}
+
+.copyrights {
+    color: white;
 }
