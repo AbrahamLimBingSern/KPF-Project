@@ -19,7 +19,7 @@
     <body>
         <!--=============== Home Section ===============-->
         <!--==================== Header ====================-->
-        <section class="container-fluid" style="background-color: #bfbfbf;">
+        <section class="header container-fluid">
             <div class="row">
                 <!--========== KPF Logo ==========-->
                 <div class="col-sm-3 d-flex align-items-center justify-content-center">
@@ -27,9 +27,8 @@
                         <img src="https://github.com/weihan07/myspatial/blob/main/image/LOGO_KPF.png?raw=true" 
                             alt="KPF Logo" 
                             class="logo-img mr-2" 
-                            width="100" 
-                            height="100" 
-                            >
+                            width="85" 
+                            height="85">
                     </div>
                 </div>
                 
@@ -60,13 +59,11 @@
                         <i class="ri-mail-fill" style="font-size: 30px; margin-bottom: 10px;"></i>
                         <div class="ml-2">
                             <h6>Email:</h6>
-                            <p style="font-size: 13.5px;">info@myspatial.com</p>
+                            <p style="font-size: 13.5px;">kpfadmin@felda.net.my</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
         </section>
 
 
@@ -84,43 +81,58 @@
                     <li class="nav-item"><a class="nav-link" href="#home"><strong>HOME</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="#project"><strong>PROJECT</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="#discover"><strong>DISCOVER</strong></a></li>
-                    <li class="nav-item"><button class="btn nav-link" onclick="window.location.href='https://thpegis.com.my'"><strong>DASHBOARD</strong></button></li>
+                    <li class="nav-item dropdown">
+                        <!-- Dropdown button -->
+                        <button class="btn btn-default dropdown-toggle nav-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <strong>DASHBOARD</strong>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div class="dropdown-menu" aria-labelledby="menu1">
+                            <a class="dropdown-item" href="https://www.arcgis.com/apps/dashboards/d9ce4807a462406fac1cce52aafb03d6" target="_blank">Ladang KPF Aring</a>
+                            <a class="dropdown-item" href="https://www.arcgis.com/apps/dashboards/610a2f5911e04c6eb8d28f7cee157cd0" target="_blank">Ladang KPF Aring (Limau Kasturi)</a>
+                            <a class="dropdown-item" href="https://www.arcgis.com/apps/dashboards/1499a913e74f4f05a5626c41800920c6" target="_blank">Ladang KPF Blau</a>
+                            <a class="dropdown-item" href="https://www.arcgis.com/apps/dashboards/e81cf91e137d400dbfa68117080057c7" target="_blank">Ladang KPF Galas</a>
+                        </div>
+                    </li>                
                 </ul>                    
             </div>
         </nav>
 
-        <section id="belowhome" class="py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center">
+        <!--==================== Home Section ====================-->
+        <section id="home">
+            <div class="home">
+                <div class="row">
+                    <div class="col-6">
                         <img src="https://www.seilergeodrones.com/wp-content/uploads/sites/10/2022/03/F90___R6___20200318.180.png" 
-                             alt="UAV" 
-                             class="uav img-fluid">
+                             alt="Trinity" 
+                             class="Trinity img-fluid">
                     </div>
-                    <div class="col-md-6">
-                        <h1>Digital Precision Agriculture</h1>
-                        <p style="font-size: 20px; text-align: justify;"><strong>Data Collection, Analyzing, and Checking related to Digital Mapping through UAV Image Observation for 
+                    <div class="col-6 d-flex flex-column justify-content-center">
+                        <h1 style="padding-right: 100px;">Digital Precision Agriculture</h1>
+                        <p style="padding-right: 100px;"><strong>Data Collection, Analyzing, and Checking related to Digital Mapping through UAV Image Observation for 
                             Ladang KPF Aring, Ladang KPF Blau, and Ladang KPF Galas in Gua Musang, Kelantan.</strong></p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!--===== Bar Section =====-->
         <section>
-            <div class="container1">
+            <div class="container1 container-fluid">
                 <div class="row">
-                    <div class="feature-box d-flex">
+                    <div class="col feature-box d-flex align-items-center justify-content-center">
                         <i class="ri-thumb-up-line"></i>
                         <h3>Precision Farming</h3>
                     </div>
-                    <div class="feature-box d-flex">
+                    <div class="col feature-box d-flex align-items-center justify-content-center">
                         <i class="ri-thumb-up-line"></i>
                         <h3>Remote Sensing</h3>
                     </div>
-                    <div class="feature-box1 d-flex">
+                    <div class="col feature-box1 d-flex align-items-center justify-content-center">
                         <i class="ri-thumb-up-line"></i>
                         <h3>Geospatial Technology</h3>
                     </div>
-                    <div class="feature-box1 d-flex">
+                    <div class="col feature-box1 d-flex align-items-center justify-content-center">
                         <i class="ri-thumb-up-line"></i>
                         <h3>Data Analytics</h3>
                     </div>
@@ -129,9 +141,9 @@
         </section>
 
         <!--=============== About Section ===============-->
-        <section id="about" class="bg-light py-5">
+        <section id="project">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center mt-3 mb-3">
                     <!-- Left Column: Image -->
                     <div class="col-md-6 text-center">
                         <video src="https://raw.githubusercontent.com/weihan07/myspatial/main/image/video5.mp4" 
@@ -144,18 +156,18 @@
                     
                     <!-- Right Column: Text and Table -->
                     <div class="col-md-6" style="padding-bottom: 30px;">
-                        <h2 class="section-title text-center">About Project</h2>
-                        <p style="font-size: 20px; text-align: justify;">"Drone Mapping Service for Tree Counting Analysis" for Ladang KPF Aring, Ladang KPF Blau, and Ladang KPF Galas, Gua Musang, Kelantan.</p>
+                        <h1 class="section-title">About Project</h1>
+                        <p>"Drone Mapping Service for Tree Counting Analysis" for Ladang KPF Aring, Ladang KPF Blau, and Ladang KPF Galas, Gua Musang, Kelantan.</p>
         
                         <div class="table-responsive text-center">
                             <table class="table mx-auto">
                                 <tr>
-                                    <td><i class="ri-plane-line" style="font-size: 20px;"></i> Drone Mapping</td>
-                                    <td><i class="ri-bar-chart-grouped-line" style="font-size: 20px;"></i> Inventory Mapping & Analysis</td>
+                                    <td><i class="ri-plane-line"></i> Drone Mapping</td>
+                                    <td><i class="ri-bar-chart-grouped-line"></i> Inventory Mapping & Analysis</td>
                                 </tr>
                                 <tr>
-                                    <td><i class="ri-global-fill" style="font-size: 20px;"></i> 360 Degree Panoramic View</td>
-                                    <td><i class="ri-cellphone-fill" style="font-size: 20px;"></i> GIS Web Mapping</td>
+                                    <td><i class="ri-global-fill"></i> 360 Degree Panoramic View</td>
+                                    <td><i class="ri-cellphone-fill"></i> GIS Web Mapping</td>
                                 </tr>
                             </table>
                         </div>
@@ -165,12 +177,12 @@
         </section>
         
         <!--=============== Discover Section ===============-->
-        <section id="discover" class="container2 py-5">
+        <section id="discover" class="container2">
             <div class="container">
-                <h2 class="section__title1 text-center">Discover</h2>
+                <h1 class="section__title1">Discover</h1>
                 
                 <!-- Image Section -->
-                <h3 class="section__title text-left">Image</h3>
+                <h3 class="image__title">Image</h3>
                 <div class="discover__container grid row">
                     <div class="image__card">
                         <img src="https://github.com/weihan07/myspatial/blob/main/image/1.jpg?raw=true" alt="" class="discover__image img-fluid">
@@ -201,8 +213,46 @@
                     </div>
                 </div>
                 
+                <!-- Modal for Image Preview -->
+                <div id="imageModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                </div>
+
+                <script>
+                    // Get the modal and modal image element
+                    var modal = document.getElementById("imageModal");
+                    var modalImage = document.getElementById("modalImage");
+                
+                    // Add click event to each image
+                    document.querySelectorAll('.discover__image').forEach(img => {
+                        img.onclick = function() {
+                            modal.style.display = "block";
+                            modalImage.src = this.src; // Set the clicked image as the modal content
+                        }
+                    });
+                
+                    // Close the modal when the user clicks on <span> (x)
+                    document.querySelector(".close").onclick = function() {
+                        modal.style.display = "none";
+                    }
+                
+                    // Close the modal when clicking outside the image
+                    modal.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+                    document.addEventListener("keydown", function(event) {
+                        if (event.key === "Escape") {
+                            modal.style.display = "none";
+                        }
+                    });
+                </script>
+
                 <!--========== Video ==========-->
-                <h3 class="video_title text-left mt-5">Video</h3>
+                <h3 class="video_title">Video</h3>
                 <div class="d-flex justify-content-center">
                     <video src="https://raw.githubusercontent.com/weihan07/myspatial/761146707890d28fac309d1b131907caed02ffae/image/video.mp4" 
                             class="img-fluid" 
@@ -244,86 +294,90 @@
         </section>
         
 
-        <!--=============== Footer ===============-->
-        <footer class="footer section">
-            <div class="footer__container container">
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Left Bottom Corner (Images) -->
-                    <div class="footer__images d-flex align-items-center col-md-5">
-                        <img src="https://github.com/weihan07/myspatial/blob/main/image/LOGO_KPF.png?raw=true" alt="KPF Logo" class="logo-img mb-3" width="200" height="200" style="padding: 25px;">
-                        <img src="https://github.com/weihan07/myspatial/blob/main/image/LOGO_MYSPATIAL.png?raw=true" alt="MySpatial Logo" class="logo-img mb-3" width="200" height="200" style="padding: 25px;">
+        <!--==================== Footer Section ====================-->
+        <footer class="footer">
+            <div class="footer__container d-flex flex-column align-items-center">
+                <h3 class="contact_title text-center mt-3 mb-3">Contact Info</h3>
+                <!--========== info ==========-->
+                <div class="info_container d-flex align-items-center mb-0">
+                    <!--========== company logo ==========-->
+                    <div class="col-4 d-flex justify-content-center">
+                        <img src="https://github.com/weihan07/myspatial/blob/main/image/LOGO_KPF.png?raw=true" 
+                            alt="KPF Logo" 
+                            class="kpf_img"
+                            style="align-items: end;"
+                            height="125"
+                            width="125">
+                        <img src="https://github.com/weihan07/myspatial/blob/main/image/LOGO_MYSPATIAL.png?raw=true"
+                            alt="MySpatial Logo" 
+                            class="myspatial ml-5"
+                            height="125"
+                            width="125">
                     </div>
-        
-                    <!-- Right Side (Contact Information) -->
-                    <div class="footer__data col-md-7">
-                        <h3 class="footer__title" style="text-align: left;">Contact Info</h3>
-                        
-                        <!-- Contact Information Section -->
+
+                    <!--========== Contact Info ==========-->
+                    <div class="col-8 justify-content-center">
                         <div class="row">
-                            <!-- Address -->
-                            <div class="col-md-6 d-flex align-items-start mb-3">
-                                <i class="ri-map-pin-fill" style="font-size: 30px; padding-top: 25px; margin-right: 10px;"></i>
-                                <p style="line-height: 1.5; text-align: left; color: black;">
-                                    <strong>
-                                    Level 1, Co9P Idea Tower 1,<br> UPM-MTDC Technology Centre, <br> Universiti Putra Malaysia, <br> 43400 Serdang, Selangor Darul Ehsan.
-                                    </strong>
-                                </p>
+                            <!--===== Address =====-->
+                            <div class="col d-flex align-items-center mb-1 ml-5 mb-0">
+                                <i class="ri-map-pin-fill"></i>
+                                <p class="contact_info mb-0"><strong>Level 1, Co9P Idea Tower 1,<br> UPM-MTDC Technology Centre, <br> Universiti Putra Malaysia, <br> 43400 Serdang, Selangor Darul Ehsan.</strong></p>
                             </div>
-        
-                            <!-- Phone Number -->
-                            <div class="col-md-6 d-flex align-items-start mb-3">
-                                <i class="ri-phone-fill" style="font-size: 30px; margin-right: 10px; padding-top: 40px;"></i>
-                                <p style="line-height: 1.5; color: black; padding-top: 37px; text-align: left;">
-                                    <strong>013 356 5626 (WhatsApp) <br> 03 8959 3776 (Office)</strong>
-                                </p>
+                            
+                            <!--===== Phone num =====-->
+                            <div class="col d-flex align-items-center mb-1 ml-5">
+                                <i class="ri-phone-fill"></i>
+                                <p class="contact_info"><strong>013 356 5626 (WhatsApp) <br> 03 8959 3776 (Office)</strong></p>
                             </div>
-        
-                            <!-- Email Address -->
-                            <div class="col-md-6 d-flex align-items-start mb-3">
-                                <i class="ri-mail-fill" style="font-size: 30px; margin-right: 10px;"></i>
-                                <p style="line-height: 1.5; color: black; padding-top: 10px;">
-                                    <strong>sales@myspatial.com.my</strong>
-                                </p>
+
+                            <div class="w-100"></div>
+
+                            <!--===== Email =====-->
+                            <div class="col d-flex align-items-center mb-0 ml-5">
+                                <i class="ri-mail-fill"></i>
+                                <p class="contact_info mt-2"><strong>sales@myspatial.com.my</strong></p>
                             </div>
-        
-                            <!-- Working Hours -->
-                            <div class="col-md-6 d-flex align-items-start mb-3">
-                                <i class="ri-time-line" style="font-size: 30px; margin-right: 10px;"></i>
-                                <p style="line-height: 1.5; color: black; padding-top: 10px;">
-                                    <strong>Mon - Fri: 9:00 am - 6:00 pm</strong>
-                                </p>
+
+                            <!--===== Working Hour =====-->
+                            <div class="col d-flex align-items-center mb-0 ml-5">
+                                <i class="ri-time-line"></i>
+                                <p class="contact_info mt-2"><strong>Mon - Fri: 9:00 am - 6:00 pm</strong></p>
                             </div>
                         </div>
                     </div>
                 </div>
-        
-                <!-- Social Media Links at the Bottom -->
-                <div class="footer__bottom mt-4 text-center">
-                    <div class="footer__social">
-                        <a href="https://www.facebook.com/myspatial/" target="_blank" class="social-icon">
-                            <i class="ri-facebook-box-fill"></i>
+
+                <!--========== company link ==========-->
+                <div class="link text-center">
+                    <div class="link_social">
+                        <a href="https://www.facebook.com/myspatial/" target="_blank">
+                        <i class="ri-facebook-box-fill"></i>
                         </a>
-                        <a href="https://x.com/myspatialsb/" target="_blank" class="social-icon">
+
+                        <a href="https://x.com/myspatialsb/" target="_blank">
                             <i class="ri-twitter-fill"></i>
                         </a>
-                        <a href="https://www.instagram.com/myspatial/" target="_blank" class="social-icon">
-                            <i class="ri-instagram-fill"></i>
+
+                        <a href="https://www.instagram.com/myspatial/" target="_blank">
+                        <i class="ri-instagram-fill"></i>
                         </a>
-                        <a href="https://my.linkedin.com/company/myspatial-sdn-bhd" target="_blank" class="social-icon">
+
+                        <a href="https://my.linkedin.com/company/myspatial-sdn-bhd" target="_blank">
                             <i class="ri-linkedin-fill"></i>
                         </a>
                     </div>
-                    <div class="footer__rights mt-2">
-                        <p class="footer__copy"><em>Copyright © 2024 MySpatial Sdn. Bhd. (872188-A) All Rights Reserved.</em></p>
+                    <div>
+                        <p class="copyrights"><em>Copyright © 2024 MySpatial Sdn. Bhd. (872188-A) All Rights Reserved.</em></p>
                     </div>
                 </div>
             </div>
         </footer>
-        
-        <!--=============== Bootstrap JS and dependencies ===============-->
+
+
+        <!-- Bootstrap JS (with jQuery and Popper.js) -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
         </body>
     </html>
