@@ -1,37 +1,84 @@
 /* Custom styles */
-/* Adjust layout on smaller screens */
+/* Responsive styles */
 @media (max-width: 768px) {
-    .about-content, .edu-item, .exp-item, .project-item {
-        flex-direction: column;
-        align-items: center;
+    /* Adjust padding and margins for smaller screens */
+    .container, .home {
+        padding-top: 20px;
     }
-    .container {
-        width: 95%;
+
+    /* Navigation adjustments for smaller screens */
+    .navbar_title {
+        font-size: 16px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .btn nav-link {
+        font-size: 24px;
+    }
+
+    /* Discover section grid adjustment */
+    .discover__container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    }
+
+    /* Image card adjustments */
+    .image__card {
+        border-radius: 5px;
+    }
+
+    .discover__image {
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        max-width: 90%; /* Make modal content fit better on small screens */
+    }
+
+    /* Footer adjustments */
+    .footer__container {
+        min-height: auto; /* Allow footer to adjust height */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .col-8 i {
+        font-size: 24px; /* Adjust icon size */
+    }
+
+    .link_social a {
+        font-size: 28px; /* Adjust social icon size */
     }
 }
 
-@media (max-width: 600px) {
-    header, .about, .education, .experience, .project, .professional, .skills {
-        padding: 15px 0;
-    }
-    .container {
-        width: 90%;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
-        grid-auto-rows: minmax(25px, auto);    /* Adjust row height as needed */
-        gap: 10px;                             /* Space between items */
-        justify-items: center;                 /* Center align each item */
-        text-align: center;
+/* Further adjustments for very small screens (phones) */
+@media (max-width: 480px) {
+    /* Discover section grid for extra small screens */
+    .discover__container {
+        grid-template-columns: 1fr; /* Single column for very small screens */
     }
 
-    .navbar li {
-        width: 100%;                           /* Full width for each item */
-        list-style: none;                      /* Remove default list style */
+    /* Text adjustments */
+    .home p, .col-md-6 p {
+        font-size: 18px; /* Reduce text size */
+    }
+
+    .section-title {
+        font-size: 1.5rem; /* Smaller section title */
+    }
+
+    .table td {
+        font-size: 16px; /* Adjust table text size */
+    }
+
+    .contact_info, .contact_title {
+        font-size: 14px; /* Adjust contact info text */
+    }
+
+    .copyrights {
+        font-size: 12px; /* Smaller font for copyrights */
     }
 }
 
